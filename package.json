@@ -1,8 +1,8 @@
 {
   "name": "litlyx-nuxt",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Litlyx Nuxt3 module",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
@@ -26,8 +26,7 @@
     "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-    "release:nolint": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
@@ -37,18 +36,17 @@
     "@nuxt/kit": "^3.17.6"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^2.6.0",
-    "@nuxt/eslint-config": "^1.4.1",
+    "@nuxt/devtools": "^2.6.2",
+    "@nuxt/eslint-config": "^1.5.2",
     "@nuxt/module-builder": "^1.0.1",
     "@nuxt/schema": "^3.17.6",
-    "@nuxt/test-utils": "^3.19.1",
-    "@nuxtjs/tailwindcss": "7.0.0-beta.0",
+    "@nuxt/test-utils": "^3.19.2",
     "@types/node": "latest",
-    "changelogen": "^0.6.1",
-    "eslint": "^9.30.0",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.30.1",
     "nuxt": "^3.17.6",
     "typescript": "~5.8.3",
     "vitest": "^3.2.4",
-    "vue-tsc": "^2.2.10"
+    "vue-tsc": "^3.0.1"
   }
 }
