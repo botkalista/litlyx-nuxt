@@ -1,7 +1,7 @@
 {
   "name": "litlyx-nuxt",
-  "version": "1.0.0",
-  "description": "Litlyx Nuxt module",
+  "version": "1.0.1",
+  "description": "Litlyx Nuxt3 module",
   "license": "Apache-2.0",
   "type": "module",
   "exports": {
@@ -27,6 +27,7 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "release:nolint": "npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
