@@ -10,7 +10,6 @@ export interface ModuleOptions {
   },
   automaticMode?: boolean
 }
-
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'litlyx-nuxt',
@@ -26,10 +25,10 @@ export default defineNuxtModule<ModuleOptions>({
     },
     automaticMode: true
   },
-  async setup(_options, _nuxt) {
+  setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    _nuxt.options.runtimeConfig.public.litlyx = _options;
+    _nuxt.options.runtimeConfig.public.litlyx = _options as any;
 
     addPlugin({
       src: resolver.resolve('./runtime/litlyx'),

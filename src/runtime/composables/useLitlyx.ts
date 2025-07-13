@@ -1,5 +1,4 @@
-import { useRuntimeConfig } from "#app";
-
+import { useRuntimeConfig } from "nuxt/app";
 
 async function event(name: string, metadata?: Record<string, any>) {
 

@@ -1,20 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "baseUrl": ".",
-    "paths": {},
-    "types": [
-      "node"
-    ]
-  },
-  "include": [
-    "./**/*"
-  ],
+  "extends": "./.nuxt/tsconfig.json",
   "exclude": [
     "dist",
     "node_modules",

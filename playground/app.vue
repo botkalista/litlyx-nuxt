@@ -1,16 +1,17 @@
 <script setup lang="ts">
 
-const a = useLitlyx();
+const { event } = useLitlyx();
 
 function sendEvent() {
-  a.event('test', { a: 123 })
+  event('test');
 }
 
 </script>
 
-
 <template>
   <div>
-    <button @click="sendEvent()"> </button>
+
+    <button @click="sendEvent"> Test event </button>
+
   </div>
 </template>
